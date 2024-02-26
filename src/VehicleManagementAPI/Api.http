@@ -4,3 +4,15 @@ GET {{VehicleManagementAPI_HostAddress}}/api/vehicles
 Accept: application/json
 
 ###
+GET {{VehicleManagementAPI_HostAddress}}/api/vehicles/2022 HMD
+Accept: application/json
+
+###
+POST {{VehicleManagementAPI_HostAddress}}/api/vehicles
+Content-Type: application/json
+
+{
+    "licenseNumber": "2022 HMD",
+    "brand": "BMW",
+    "type": "M5"
+}

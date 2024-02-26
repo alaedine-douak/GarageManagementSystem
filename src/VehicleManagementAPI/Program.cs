@@ -1,6 +1,13 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using VehicleManagementAPI.DataAccess;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var sqlConnectionString = builder.Configuration.GetConnectionString("VehicleManagementCS");
+
+builder.Services.AddDbContext<VehicleManagementDbContext>(opts => 
+    opts.UseSqlServer(sqlConnectionString));
 
 builder.Services.AddControllers();
 
