@@ -1,0 +1,6 @@
+@VehicleManagementAPI_HostAddress = http://localhost:5002
+
+GET {{VehicleManagementAPI_HostAddress}}/api/vehicles
+Accept: application/json
+
+###
