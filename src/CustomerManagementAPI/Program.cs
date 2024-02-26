@@ -1,7 +1,14 @@
 using Microsoft.OpenApi.Models;
+using Microsoft.EntityFrameworkCore;
+
+using CustomerManagementAPI.DataAccess;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var sqlConnectionString = builder.Configuration.GetConnectionString("CustomerManagementCN");
+
+builder.Services.AddDbContext<CustomerManagementDbContext>(opts => 
+    opts.UseSqlServer(sqlConnectionString));
 
 builder.Services.AddControllers();
 

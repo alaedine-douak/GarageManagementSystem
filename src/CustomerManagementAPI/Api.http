@@ -4,3 +4,14 @@ GET {{CustomerManagementAPI_HostAddress}}/api/customers
 Accept: application/json
 
 ###
+GET {{CustomerManagementAPI_HostAddress}}/api/customers/1
+Accept: application/json
+
+###
+POST {{CustomerManagementAPI_HostAddress}}/api/customers
+Content-Type: application/json
+
+{
+    "name": "douak",
+    "address": "HMD"
+}
